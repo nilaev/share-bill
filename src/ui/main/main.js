@@ -9,7 +9,6 @@ export const Main = () => {
   const [codeFound, setCodeFound] = useState(true);
   const [code, setCode] = useState(null);
   
-  // const update = useContext(context).dataUpdate;
   const navigate = useNavigate();
   
   const handleInputChang = (event) => {
@@ -27,10 +26,6 @@ export const Main = () => {
         setCodeFound(false)
       } else {
         setCodeFound(true)
-        // console.log(curCode)
-        // update({
-        //   groupId: curCode
-        // });
         return navigate(`/${curCode}`);
       }
     }

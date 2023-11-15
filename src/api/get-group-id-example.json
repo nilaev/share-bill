@@ -1,0 +1,91 @@
+{
+    "title": "Pizza Day 2",
+    "creator": {
+        "id": 2,
+        "requisites": "+7 (900) 125-67-85"
+    },
+    "participants": [
+        {
+            "id": 1,
+            "name": "John"
+        },
+        {
+            "id": 2,
+            "name": "Anna"
+        },
+        {
+            "id": 3,
+            "name": "Jack"
+        },
+        {
+            "id": 4,
+            "name": "Vasya"
+        }
+    ],
+    "bill": [
+        {
+            "payerId": 1,
+            "totalPrice": 299,
+            "positions": [
+                {
+                    "id": 1,
+                    "title": "Margherita",
+                    "price": 299,
+                    "parts": 3,
+                    "personalParts": 2,
+                    "personalPrice": 199
+                },
+                {
+                    "id": 3,
+                    "title": "Vitello Tonnato",
+                    "price": 199,
+                    "parts": 2,
+                    "personalParts": 1,
+                    "personalPrice": 100
+                }
+            ]
+        },
+        {
+            "payerId": 2,
+            "totalPrice": 499,
+            "positions": [
+                {
+                    "id": 2,
+                    "title": "Quattro Formaggi",
+                    "price": 499,
+                    "parts": 1,
+                    "personalParts": 1,
+                    "personalPrice": 499
+                }
+            ]
+        },
+        {
+            "payerId": 3,
+            "totalPrice": 100,
+            "positions": [
+                {
+                    "id": 1,
+                    "title": "Margherita",
+                    "price": 299,
+                    "parts": 3,
+                    "personalParts": 1,
+                    "personalPrice": 100
+                }
+            ]
+        },
+        {
+            "payerId": 4,
+            "totalPrice": 99,
+            "positions": [
+                {
+                    "id": 3,
+                    "title": "Vitello Tonnato",
+                    "price": 199,
+                    "parts": 1,
+                    "personalParts": 1,
+                    "personalPrice": 99
+                }
+            ]
+        }
+    ]
+}
