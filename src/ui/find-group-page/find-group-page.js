@@ -2,8 +2,8 @@ import * as React from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Wrapper } from '../utils/wrapper/wrapper'
+import { getGroupById } from '../../api/get-group-by-id'
 import s from './find-group-page.module.css'
-import { getGroupId } from '../../api/get-group-id'
 
 export const FindGroupPage = () => {
   const { groupId } = useParams()
@@ -15,7 +15,7 @@ export const FindGroupPage = () => {
     </Wrapper>
   }
   
-  getGroupId(groupId).then(res => setParticipants(res.participants))
+  getGroupById(groupId).then(res => setParticipants(res.participants))
   
   return (
     <Wrapper>

@@ -7,19 +7,19 @@
     "participants": [
         {
             "id": 1,
-            "name": "John"
+            "name": "Жора"
         },
         {
             "id": 2,
-            "name": "Anna"
+            "name": "Аня"
         },
         {
             "id": 3,
-            "name": "Jack"
+            "name": "Коля"
         },
         {
             "id": 4,
-            "name": "Vasya"
+            "name": "Вася"
         }
     ],
     "bill": [

@@ -7,7 +7,7 @@
 .title {
   margin-top: 60px;
   margin-bottom: 40px;
-  font: 20px Montserrat;
+  font: 22px Montserrat;
   font-weight: 900;
   text-align: center;
   color: rgb(46,46,229);
@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
 
-  width: 212px;
+  width: 300px;
   height: 20px;
   padding: 15px 25px;
   border-radius: 10px;

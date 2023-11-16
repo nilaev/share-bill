@@ -21,8 +21,8 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
-  height: 30px;
+  width: 300px;
+  height: 20px;
   padding: 15px 25px;
   border-radius: 10px;
   margin-top: 15px;
@@ -36,14 +36,18 @@
   text-decoration: none;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .inputField {
   display: flex;
   flex-direction: column;
 }
 
 .input {
-  width: 166px;
-  height: 26px;
+  width: 296px;
+  height: 16px;
   padding: 15px 25px;
   border-radius: 10px;
   margin-top: 15px;
