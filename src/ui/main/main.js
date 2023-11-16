@@ -47,10 +47,10 @@ export const Main = () => {
           </div>
           :
           <>
-            <a href={'/new'} className={s.button}>Разделить чек</a>
             <a onClick={() => setInputIsOpen(true)} className={s.button}>
               Оплатить чек
             </a>
+            <a href={'/new'} className={s.button}>Разделить чек</a>
           </>
         }
       </div>

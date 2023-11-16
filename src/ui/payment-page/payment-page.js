@@ -14,7 +14,6 @@ export const PaymentPage = () => {
   const [requisites, setRequisites] = useState('')
   const [payerInfo, setPayerInfo] = useState({})
   
-  const [block1IsOpen, setBlock1IsOpen] = useState(false)
   const [block2IsOpen, setBlock2IsOpen] = useState(false)
   
   const [requisitesCopy, setRequisitesCopy] = useState(false)
@@ -39,18 +38,17 @@ export const PaymentPage = () => {
     <div className={s.root}>
       <p className={s.title}>{`Ваш чек ${payerInfo?.totalPrice} руб.`}</p>
       <div className={s.cutBlock}>
-        <div className={s.header} onClick={() => setBlock1IsOpen(!block1IsOpen)}>
+        <div className={s.header}>
           <p className={s.cutBlockTitle}>Реквизиты</p>
         </div>
-        {block1IsOpen ?
-          <div className={s.body}>
-            <div className={s.requisites}>
-              {requisites}
+        <div className={s.body}>
+          <div className={s.requisites}>
+            {requisites}
+          </div>
+          {requisitesCopy ?
+            <div className={s.checkIcon}>
+              <img src={check} alt={check}/>
             </div>
-            {requisitesCopy ?
-              <div className={s.checkIcon}>
-                <img src={check} alt={check}/>
-              </div>
               :
               <div className={s.copyIcon} onClick={() => {
                 clipboard.copy(requisites)
@@ -60,7 +58,6 @@ export const PaymentPage = () => {
               </div>
             }
           </div>
-          : null}
       </div>
     
       <div className={s.cutBlock}>
