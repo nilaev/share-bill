@@ -9,15 +9,11 @@ export const fetchData = (url) => {
   })
 }
 
-export const API_URL = 'http://185.231.154.195/api'
-
 export const getGroupById = async (groupId) => {
   try {
-    // console.log(`${API_URL}/groups/get/${groupId}`)
-    // const res = await fetchData(`${API_URL}/groups/get/${groupId}`)
-    // console.log(res)
-    // return res.data
-    return data;
+    const res = await fetchData(`http://185.231.154.195/api/groups/get/${groupId}`)
+    return res.data
+    // return data;
   } catch (e) {
     console.error(e)
   }
