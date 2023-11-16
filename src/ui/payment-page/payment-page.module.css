@@ -88,22 +88,25 @@
 }
 
 .positionTitle {
-  margin: 0;
-  width: 150px;
+  width: 140px;
   white-space: pre-line;
   overflow-y: hidden;
+  margin: 0 10px 0 0;
 }
 
 .positionCalculate {
   display: flex;
   align-items: center;
-  width: 80px;
+  width: 75px;
   line-height: 19px;
   font: 14px Montserrat;
-  margin: 0;
+  margin: 0 10px 0 0;
   color: #858588;
 }
 
 .positionPrice {
+  display: flex;
+  align-items: center;
+  width: 75px;
   margin: 0;
 }

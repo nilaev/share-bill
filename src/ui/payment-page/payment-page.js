@@ -12,6 +12,7 @@ export const PaymentPage = () => {
   const { groupId, userId } = useParams()
   const [bill, setBill] = useState([])
   const [hasInfo, setHasInfo] = useState(false)
+  const [pageNotFound, setPageNotFound] = useState(true)
   const [requisites, setRequisites] = useState('')
   const [payerInfo, setPayerInfo] = useState({})
   
@@ -24,9 +25,12 @@ export const PaymentPage = () => {
   useEffect(() => {
     if (!hasInfo) {
       getGroupById(groupId).then(res => {
-        setBill(res.bill)
-        setRequisites(res.requisites)
-        setHasInfo(true)
+        console.log(res)
+        if (res) {
+          setBill(res.bill)
+          setRequisites(res.requisites)
+          setHasInfo(true)
+        }
       })
     }
   }, [])
@@ -34,25 +38,31 @@ export const PaymentPage = () => {
   useEffect(() => {
     if (bill[0]) {
       for (let i = 0; i < bill.length; i++) {
-        if (bill[i] && bill[i]?.payerId.toString() === userId) {
+        console.log(bill[i].payerId)
+        if (bill[i] && bill[i].payerId.toString() === userId) {
           setPayerInfo(bill[i])
+          setPageNotFound(false)
         }
       }
     }
   }, [bill])
   
   return <Wrapper>
-    {hasInfo && payerInfo.totalPrice?
-      <div className={s.root}>
-        <p className={s.title}>{`Ваш чек ${payerInfo?.totalPrice} руб.`}</p>
-        <div className={s.cutBlock}>
-          <div className={s.header}>
-            <p className={s.cutBlockTitle}>Реквизиты</p>
-          </div>
-          <div className={s.body}>
-            <div className={s.requisites}>
-              {requisites}
+    {hasInfo ?
+      <>
+      {pageNotFound ?
+        <p className={s.title}>Пользователь не найден</p>
+        :
+        <div className={s.root}>
+          <p className={s.title}>{`Ваш чек ${payerInfo?.totalPrice} руб.`}</p>
+          <div className={s.cutBlock}>
+            <div className={s.header}>
+              <p className={s.cutBlockTitle}>Реквизиты</p>
             </div>
+            <div className={s.body}>
+              <div className={s.requisites}>
+                {requisites}
+              </div>
             {requisitesCopy ?
               <div className={s.checkIcon}>
                 <img src={check} alt={check}/>
@@ -88,6 +98,8 @@ export const PaymentPage = () => {
             : null}
         </div>
       </div>
+      }
+      </>
       : null}
   </Wrapper>
 }

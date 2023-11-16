@@ -1,9 +1,6 @@
 {
     "title": "Pizza Day 2",
-    "creator": {
-        "id": 2,
-        "requisites": "+7 (900) 125-67-85"
-    },
+    "requisites": "+7 (900) 125-67-85",
     "participants": [
         {
             "id": 1,
@@ -25,20 +22,20 @@
     "bill": [
         {
             "payerId": 1,
-            "totalPrice": 299,
+            "totalPrice": 300,
             "positions": [
                 {
                     "id": 1,
-                    "title": "Margherita",
-                    "price": 299,
+                    "title": "Пицца Маргарита",
+                    "price": 300,
                     "parts": 3,
                     "personalParts": 2,
-                    "personalPrice": 199
+                    "personalPrice": 200
                 },
                 {
                     "id": 3,
-                    "title": "Vitello Tonnato",
-                    "price": 199,
+                    "title": "Салат Цезарь",
+                    "price": 200,
                     "parts": 2,
                     "personalParts": 1,
                     "personalPrice": 100
@@ -51,7 +48,7 @@
             "positions": [
                 {
                     "id": 2,
-                    "title": "Quattro Formaggi",
+                    "title": "Паста четыре сыра",
                     "price": 499,
                     "parts": 1,
                     "personalParts": 1,
@@ -65,8 +62,8 @@
             "positions": [
                 {
                     "id": 1,
-                    "title": "Margherita",
-                    "price": 299,
+                    "title": "Пицца Маргарита",
+                    "price": 300,
                     "parts": 3,
                     "personalParts": 1,
                     "personalPrice": 100
@@ -75,15 +72,15 @@
         },
         {
             "payerId": 4,
-            "totalPrice": 99,
+            "totalPrice": 100,
             "positions": [
                 {
                     "id": 3,
-                    "title": "Vitello Tonnato",
-                    "price": 199,
+                    "title": "Салат Цезарь",
+                    "price": 200,
                     "parts": 1,
                     "personalParts": 1,
-                    "personalPrice": 99
+                    "personalPrice": 100
                 }
             ]
         }
