@@ -23,7 +23,8 @@ export const Main = () => {
     } else {
       const curCode = parseInt(code.toString(), 10)
       getGroupById(curCode).then(r => {
-        if (r) {
+        console.log(r)
+        if (r?.detail !== "Страница не найдена.") {
           setCodeFound(true)
           return navigate(`/${curCode}`);
         } else {
