@@ -10,7 +10,7 @@ export const fetchData = (url) => {
 
 export const getGroupById = async (groupId) => {
   try {
-    return await fetchData(`https://hungry.mymidjourney.ru/api/groups/get/${groupId}`)
+    return await fetchData(`http://88.218.61.170/api/groups/get/${groupId}`)
     // return data;
   } catch (e) {
     console.error(e)
